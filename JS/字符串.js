@@ -1,6 +1,11 @@
 var first = "Hello";
 var last = "Kitty";
 
+/*
+  所有字符串方法都会返回新字符串。它们不会修改原始字符串。
+  正式地说：字符串是不可变的：字符串不能更改，只能替换。
+*/
+
 //indexOf() 方法返回字符串中指定文本首次出现的索引（位置）：未找到文本返回-1
 function indexof() {
   var a = first.indexOf("ll");
@@ -42,4 +47,40 @@ function replace() {
   console.log(first);
 }
 
-replace();
+//通过 toUpperCase() 把字符串转换为大写：
+//通过 toLowerCase() 把字符串转换为小写：
+function toUpperCase() {
+  var a = first.toUpperCase();
+  console.log(a);
+  var a = first.toLowerCase();
+  console.log(a);
+}
+
+//concat() 连接两个或多个字符串：
+function concat() {
+  var a = first.concat("", last);
+  console.log(a);
+}
+
+//trim() 方法删除字符串两端的空白符：
+function trim() {
+  var a = "   abc   ";
+  var b = a.trim();
+  console.log(b);
+}
+
+//charAt() 方法返回字符串中指定下标（位置）的字符串：
+function charAt() {
+  var a = first.charAt(1);
+  console.log(a);
+}
+
+//字符串最好不使用属性访问
+
+//可以通过 split() 将字符串转换为数组：
+function split() {
+  var a = first.split();
+  console.log(a);
+}
+
+split();
